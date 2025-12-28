@@ -13,6 +13,21 @@
 <script type="text/javascript" src="https://cdn.cruzium.info/angular-stylishselect/latest/angular-stylishselect.min.js"></script>
 ```
 
+*Inject Dependency to Angular App*
+
+```javascript
+window.app = angular.module('app', [ ... , 'ngStylishselect', ... ]);
+```
+
+*Configure Default Options Globally (Optional)*
+```javascript
+app.config(function(ngStylishselectConfigProvider) {
+	ngStylishselectConfigProvider.setDefaults({
+		...
+	});
+});
+```
+
 ## Usage
 
 *Basic HTML Markup*
@@ -37,22 +52,13 @@ Note: The plugin requires attribute `ng-model` to work.
 </select>
 ```
 
-*To Set Default Options Globally*
-```javascript
-app.config(function(ngStylishselectConfigProvider) {
-	ngStylishselectConfigProvider.setDefaults({
-		...
-	});
-});
-```
-
 ## Options
 
-Refer to [Options](https://github.com/cruzium-js-lab/stylish-select#options) section.
+Refer to [Options](https://github.com/cruzium-lab/stylish-select#options) section.
 
 ## Limitations
 
-Refer to [Limitiations](https://github.com/cruzium-js-lab/stylish-select#limitations) section.
+Refer to [Limitiations](https://github.com/cruzium-lab/stylish-select#limitations) section.
 
 ## Support This Project
 
